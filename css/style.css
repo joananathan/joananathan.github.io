@@ -39,13 +39,15 @@ header {
 
 .logo {
     font-size: 33px;
-    font-weight: 700;
+    font-weight: 400;
+    font-family: syne;
     color: var(--text-color);
 }
 .navbar{
     display: flex;
 }
 .navbar a {
+    font-family: syne;
     color: var(--text-color);
     font-size: var(--p-font);
     font-weight: 500;
