@@ -58,10 +58,23 @@ header {
     color: var(--main-color);
 }
 
-.home {
-    font-size: 5px;
-    font-weight: 400;
-    font-family: abel;
-    color: var(--text-color);
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to left, rgba(0,0,0,0.6),rgba(0,0,0,0,3)), url(https://th.bing.com/th/id/OIP.x9ujcjh6RUXOtjRKnMtikwHaFB?rs=1&pid=ImgDetMain);
+    background-size: cover;
+    background-position: bottom center;
+    display: flex;
 
 }
+/*
+.home h1{
+    font-size: 40px;
+    font-weight: 500;
+    font-family: abel;
+    color: var(--text-color);
+    padding-top: 50px;
+    padding-left: 15%;
+}
+*/
