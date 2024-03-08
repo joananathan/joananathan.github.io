@@ -16,18 +16,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 
+
 </head>
 <body>
-    <script src="js/script.js"></script>
+    
     <header>
-        <a href="#" class="logo">agenda</a>
-        <ul class="navbar">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Placeholder</a></li></li>
-        </ul>
+        <nav class="header__nav">
+            <div class="header__logo">
+                <a href="#" class="logo">agenda</a>
+                <div class="header__logo-overlay"></div>
+            </div>
+
+            <ul class="header__menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Login</a></li>
+                <li><i class='bx bx-search' alt="search"></i></li>
+            </ul>
+
+            <ul class="header__menu=mobile">
+                <li><i class='bx bx-menu' alt="menu"></i></li>
+            </ul>
+        </nav>
     </header>
 
     <section class="home">
@@ -35,5 +46,6 @@
             <h1 class="home">lorem ipsum g</h1>
         </div>
     </section>
+    <script src="js/script.js"></script>
 </body>
 </html>

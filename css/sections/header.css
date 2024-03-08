@@ -1,0 +1,50 @@
+.header__nav {
+    display: flex;
+    overflow: hidden;
+}
+
+.header__logo {
+    flex: 1;
+    display: flex;
+    position: relative;
+    padding: 40px;
+}
+
+.header__logo-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: -1;
+}
+
+.header__logo a {
+    text-decoration: none;
+    padding-left: 3%;
+
+    font-weight: 400;
+    font-size: 40px;
+    font-family: var(--syne);
+    color: #fff;
+    
+}
+
+.header__menu, .header__menu-mobile {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 6rem;
+
+    list-style: none;
+}
+
+.header__menu li,a{
+    text-decoration: none;
+    font-family: var(--syne);
+    color: var(--secondary-color);
+    font-size: 20px;
+    text-transform: lowercase;
+    line-height: 20px;
+    cursor: pointer;
+}
