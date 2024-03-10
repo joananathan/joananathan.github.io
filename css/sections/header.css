@@ -7,7 +7,7 @@
     flex: 1;
     display: flex;
     position: relative;
-    padding: 40px;
+    padding: 20px;
 }
 
 .header__logo-overlay {
@@ -30,21 +30,24 @@
 }
 
 .header__menu, .header__menu-mobile {
-    padding: 20px;
+    padding: 20px 10px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    gap: 6rem;
+    gap: 4rem;
 
     list-style: none;
 }
 
-.header__menu li,a{
+.header__menu li a{
     text-decoration: none;
     font-family: var(--syne);
     color: var(--secondary-color);
     font-size: 20px;
     text-transform: lowercase;
-    line-height: 20px;
+    line-height: 10px;
     cursor: pointer;
+}
+.header__menu li i {
+    color: var(--secondary-color);
 }
