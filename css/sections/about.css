@@ -48,3 +48,22 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.about-us__subtitle {
+    text-transform: uppercase;
+    font-family: var(--barlow);
+}
+
+.about-us__title {
+    margin: 0;
+    padding-bottom: 10px;
+    font-family: var(--quicksand);
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.about-us__description {
+    font-family: var(--jakarta);
+    font-size: 17px;
+    font-weight: 300;
+}
