@@ -48,3 +48,10 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.about-us__content p {
+    text-transform: uppercase;
+    font-family: var(--barlow);
+    font-weight: 300;
+    font-size: 15px;
+}
