@@ -45,6 +45,7 @@ body {
     .about-us__button {
       display: none;
     }
+
   }
   
   @media screen and (max-width: 750px) {
@@ -88,25 +89,14 @@ body {
   
   
   /* START: header media querie */
-  @media screen and (max-width: 900px) {
-    .header__nav {
-      background: var(--primary-color);
-    }
-  
-    .header__menu {
-      display: none;
-    }
-  
-    .header__menu-mobile {
-      display: flex;
-    }
-  }
   
   @media screen and (max-width: 550px) {
     .header__logo {
       padding-left: 0;
     }
+
   }
+    
   /* END: header media queries */
   
   /* START: hero media queries */
@@ -114,7 +104,11 @@ body {
     .hero {
       flex-direction: column;
     }
-  
+    
+    .header__logo-overlay {
+      background-color: var(--secondary-color);
+    }
+
     .hero-image img {
       width: 100%;
       transform: matrix(0.8, 0, 0, 0.8, 0, 0) !important;
@@ -147,4 +141,23 @@ body {
       margin: 32px 0;
     }
   
+  }
+
+  @media screen and (max-width: 900px) {
+    .header__nav {
+      background: var(--primary-color);
+    }
+  
+    .header__menu {
+      display: none;
+    }
+  
+    .header__menu-mobile {
+      display: flex;
+    }
+
+    .header__logo-overlay {
+      background-color: var(--primary-color);
+    }
+
   }
