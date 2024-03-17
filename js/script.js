@@ -1,8 +1,4 @@
-window.addEventListener('scroll',(e)=>{
-    const nav = document.querySelector('.nav');
-    if(window.pageYOffset>0){
-      nav.classList.add("add-shadow");
-    }else{
-      nav.classList.remove("add-shadow");
-    }
-});
+window.addEventListener('scroll', function(){
+    var header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY >= 10)
+})

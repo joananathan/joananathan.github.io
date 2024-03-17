@@ -1,9 +1,14 @@
 
 header {
     position: fixed;
+    top: 0;
     background-color: rgb(7, 60, 51);
     width: 100%;
     z-index: 1000000;
+}
+
+header.sticky {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add box shadow */
 }
 
 .header__nav {
@@ -15,7 +20,7 @@ header {
     flex: 1;
     display: flex;
     position: relative;
-    padding: 20px;
+    padding: 15px 50px;
     z-index: 100000;
 }
 
@@ -40,7 +45,8 @@ header {
 }
 
 .header__menu, .header__menu-mobile {
-    padding: 20px 10px;
+    padding: 15px 10px;
+    padding-right: 60px;
     flex: 1.274;
     display: flex;
     align-items: center;
