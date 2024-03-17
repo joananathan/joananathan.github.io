@@ -18,12 +18,11 @@
     --nanum: "Nanum Gothic Coding";
 
     --primary-color: rgb(13, 119, 101);
-    --secondary-color: rgb(32, 102, 88);
+    --secondary-color: rgb(17, 144, 122);
     --background-color: rgb(208, 255, 243);
 }
 
 body {
-    max-width: 1280px;
     margin: 0 auto;
     background-color: var(--background-color);
 }

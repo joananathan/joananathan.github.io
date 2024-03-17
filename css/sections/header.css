@@ -1,3 +1,11 @@
+
+header {
+    position: fixed;
+    background-color: rgb(7, 60, 51);
+    width: 100%;
+    z-index: 1000000;
+}
+
 .header__nav {
     display: flex;
     overflow: hidden;
@@ -11,13 +19,14 @@
     z-index: 100000;
 }
 
-.header__logo-overlay {
+/* .header__logo-overlay {
     position: absolute;
     inset: 0;
     width: 100%;
     background-color: var(--primary-color);
     z-index: -1;
-}
+} */
+
 
 .header__logo a {
     text-decoration: none;
@@ -53,7 +62,7 @@
 }
 
 .header__menu li a:hover {
-    color: #43b39c;
+    color: #4dc6ae;
 }
 
 .header__menu li i {
