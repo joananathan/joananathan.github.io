@@ -41,8 +41,8 @@
 }
 
 .about-us__content {
-    padding: 14px;
-
+    margin: auto;
+    padding: 4%;
     flex: 1;
     display: flex;
     justify-content: center;

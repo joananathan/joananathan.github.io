@@ -23,7 +23,8 @@
 }
 
 body {
-    margin: 0 auto;
+    max-width: px;
+    margin: auto;
     background-color: var(--background-color);
 }
 
@@ -123,6 +124,10 @@ body {
   }
   
   @media screen and (max-width: 550px) {
+    .header__logo {
+    padding-left: 5%
+    }
+
     .hero-image h2 {
       font-size: 40px;
       line-height: 60px;
@@ -143,10 +148,6 @@ body {
   }
 
   @media screen and (max-width: 900px) {
-    .header__nav {
-      background: var(--primary-color);
-    }
-  
     .header__menu {
       display: none;
     }
