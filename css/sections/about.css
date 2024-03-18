@@ -2,8 +2,7 @@
     display: flex;
     min-height: 600px;
     overflow: hidden;
-    background-color: var(--background-color);
-    
+    background: #FFF;
 }
 
 .about-us__image {
@@ -18,7 +17,7 @@
 }
 
 .about-us__image div {
-    padding: 32px 20px;
+    padding: 32px auto;
 
     flex: 1;
     display: flex;
@@ -31,13 +30,11 @@
 
 .about-us__image-about {
     width: 100%;
-    background-color: var(--background-color);
 }
 
 .about-us__image-about img{
-    padding: 0;
-    width: 100%;
-    background-color: var(--background-color);
+    padding-right: 100px;
+    width: 90%;
 }
 
 .about-us__content {
