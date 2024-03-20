@@ -1,49 +1,20 @@
 .about-us {
-    display: flex;
-    min-height: 600px;
+    margin-top: 7%;
+    min-height: 700px;
     overflow: hidden;
     background: #FFF;
+    padding: 0 10%
 }
 
-.about-us__image {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    background: #fff;
-
-    position: relative;
-}
-
-.about-us__image div {
-    padding: 32px auto;
-
-    flex: 1;
-    display: flex;
-    align-items: center;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.about-us__image-about {
-    width: 100%;
-}
-
-.about-us__image-about img{
-    padding-right: 100px;
-    width: 90%;
+.about-us__image img {
+    width: 40%;
+    float: right;
+    margin: 50px;
 }
 
 .about-us__content {
     margin: auto;
-    padding: 4%;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    padding: 5%;
 }
 
 .about-us__subtitle {
@@ -61,6 +32,7 @@
 
 .about-us__description {
     font-family: var(--jakarta);
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 300;
+    text-align: justify;
 }
