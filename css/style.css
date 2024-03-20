@@ -63,14 +63,6 @@ body {
   }
   
   @media screen and (max-width: 550px) {
-    .about-us__image-sushi2 img,
-    .about-us__image-sushi3 img {
-      width: 50%;
-      height: 160px;
-  
-      object-fit: contain;
-    }
-  
     .about-us__image div {
       padding: 32px;
     }
@@ -100,9 +92,10 @@ body {
   /* START: hero media queries */
   
   @media screen and (max-width: 750px) {
-    .hero-image h2 {
-      font-size: 70px;
-      line-height: 90px;
+
+  .hero-image h2 {
+    font-size: 70px;
+    line-height: 90px;
     }
   }
   .hero {
@@ -114,7 +107,8 @@ body {
   }
 
   .hero-image img {
-    width: 100%;
+    margin: auto;
+    width: 80%;
     transform: matrix(0.8, 0, 0, 0.8, 0, 0) !important;
     padding: 0;
   }
@@ -150,6 +144,10 @@ body {
   }
 
   @media screen and (max-width: 900px) {
+    
+    body {
+      padding-top: 76px;
+    }
     .header__menu {
       display: none;
     }
