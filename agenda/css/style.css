@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Syne:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nanum+Gothic+Coding&family=Quicksand:wght@300..700&family=Syne:wght@400..800&display=swap');
+
+
+@import url("header.css");
+@import url("app.css");
+
+
+:root {
+    --syne: "Syne";
+    --quicksand: "Quicksand";
+    --barlow: "Barlow";
+    --jakarta: "Plus Jakarta Sans";
+    --nanum: "Nanum Gothic Coding";
+
+    --primary-color: rgb(13, 119, 101);
+    --secondary-color: rgb(17, 144, 122);
+    --background-color: rgb(208, 255, 243);
+}
+
+body {
+    max-width: px;
+    margin: auto;
+    background-color: var(--background-color);
+    padding-top: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+    .about-us {
+      flex-direction: column;
+    }
+  
+    .about-us__image {
+      flex-direction: row;
+    }
+  
+    .about-us__image-sushi3 {
+      border-bottom: none;
+      border-right: 8px solid var(--color-creamson);
+    }
+  
+    .about-us__button {
+      display: none;
+    }
+
+  }
+  
+  @media screen and (max-width: 750px) {
+    .about-us__image {
+      flex-direction: column;
+    }
+  
+    .about-us__image-sushi3 {
+      border-bottom: 8px solid var(--color-creamson);
+      border-right: none;
+    }
+  
+    .about-us__button {
+      display: block;
+      top: 47%;
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .about-us__image-sushi2 img,
+    .about-us__image-sushi3 img {
+      width: 50%;
+      height: 160px;
+  
+      object-fit: contain;
+    }
+  
+    .about-us__image div {
+      padding: 32px;
+    }
+  
+    .about-us__button {
+      top: 44%;
+    }
+  
+    .about-us__content {
+      padding: 32px;
+    }
+  }
+  /* END: about us media queries */
+  
+  
+  /* START: header media querie */
+  
+  @media screen and (max-width: 550px) {
+    .header__logo {
+      padding-left: 0;
+    }
+
+  }
+    
+  /* END: header media queries */
+  
+  /* START: hero media queries */
+  @media screen and (max-width: 1060px) {
+    .hero {
+      flex-direction: column;
+    }
+    
+    .header__logo-overlay {
+      background-color: var(--secondary-color);
+    }
+
+    .hero-image img {
+      width: 100%;
+      transform: matrix(0.8, 0, 0, 0.8, 0, 0) !important;
+      padding: 0;
+    }
+  }
+  
+  @media screen and (max-width: 750px) {
+    .hero-image h2 {
+      font-size: 70px;
+      line-height: 90px;
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .header__logo {
+    padding-left: 5%
+    }
+
+    .hero-image h2 {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  
+    .hero-content-info {
+      padding: 32px;
+    }
+  
+    .hero-content-info h1 {
+      font-size: 60px;
+    }
+  
+    .hero-content-info p {
+      margin: 32px 0;
+    }
+  
+  }
+
+  @media screen and (max-width: 900px) {
+    .header__menu {
+      display: none;
+    }
+  
+    .header__menu-mobile {
+      display: flex;
+    }
+
+    .header__logo-overlay {
+      background-color: var(--primary-color);
+    }
+
+  }

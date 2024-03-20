@@ -81,13 +81,12 @@ header.sticky {
     align-items: center;
     justify-content: space-evenly;
     gap: 4rem;
-
     list-style: none;
   
     position: relative;
 }
 
 #menu {
-    font-size: 22px;
+    font-size: 30px;
     color: #FFF;
 }
