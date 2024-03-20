@@ -66,6 +66,11 @@
     display: flex;
     justify-content: space-between;
     box-shadow: 0 2px 5px 2px #505f5d;
+    transition: all 0.2s;
+    font-family: var(--quicksand);
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: #a6f7e0;
 }
 
 .category:hover {
