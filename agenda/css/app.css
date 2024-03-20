@@ -1,25 +1,25 @@
+.what {
+
+}
+
 .page {
     height: 100%;
     width: 50%;
     position: fixed;
     z-index: 1;
     top: 0;
-    overflow-x: hidden;
-    margin-top: 78px;
-
 }
 
 .left{
     left: 0;
-    background-color: #11b191;
 }
 
 .right{
     right: 0;
-    background-color: green;
 }
 .agenda-section {
     padding: 2% 100px 0 6%;
+    opacity: 1;
 }
 
 .menu-button {
@@ -37,7 +37,8 @@
 
 .content {
     font-family: var(--quicksand);
-    font-size: 1rem;;
+    font-size: 1rem;
+
 }
 
 .img {
@@ -47,41 +48,51 @@
 }
 .img i {
     font-size: 4.5rem;
-    padding-right: 3rem;
+    padding-right: 2rem;
 }
 
 .category-list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 0 50px 0 10px;
+    padding: 0 40px 0 10px;
     max-width: 650px;
 }
 
 .category {
-    background: #FFF;
     border-radius: 0.5rem;
     padding: 1.5rem 1rem;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0 2px 5px 2px #505f5d;
+    box-shadow: 0 2px 2px 1px #505f5d;
     transition: all 0.2s;
     font-family: var(--quicksand);
     font-weight: 500;
     font-size: 1rem;
-    background-color: #a6f7e0;
+    color: white;
+    background-color: #407c55db
 }
 
 .category:hover {
     transform: translateY(-5px);
-    box-shadow: 0 2px 5px 2px #505f5d;
+    box-shadow: 0 2px 4px 1px #505f5d;
 }
 
 
 .notes {
     align-items: right;
-    background-color: green;
     flex: 1;
     width: 40%;
+}
+
+@media screen and (max-width: 750px){
+    .page {
+        width: 100%;
+        z-index: 1;
+        top: 0;
+    }
+    .left {
+        z-index: 10000;
+    }
 }

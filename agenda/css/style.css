@@ -18,9 +18,10 @@
     --nanum: "Nanum Gothic Coding";
     --russo: "Russo One";
 
-    --primary-color: rgb(13, 119, 101);
-    --secondary-color: rgb(17, 144, 122);
-    --background-color: rgb(208, 255, 243);
+    --primary-color: #0d7765;
+    --secondary-color: #11907a;
+    --background-color: #d0fff3;
+    
 }
 
 body {
