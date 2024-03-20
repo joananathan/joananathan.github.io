@@ -6,6 +6,7 @@
 
 
 @import url("header.css");
+@import url("app.css");
 
 
 :root {
@@ -24,6 +25,7 @@ body {
     max-width: px;
     margin: auto;
     background-color: var(--background-color);
+    padding-top: 100px;
 }
 
 @media screen and (max-width: 1024px) {
