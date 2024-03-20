@@ -1,5 +1,82 @@
+.page {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    margin-top: 78px;
+
+}
+
+.left{
+    left: 0;
+    background-color: #11b191;
+}
+
+.right{
+    right: 0;
+    background-color: green;
+}
+.agenda-section {
+    padding: 2% 100px 0 6%;
+}
+
 .menu-button {
-    width: 2rem;
-    color:#11b191;
+    padding-top: 20px;
+    width: 3rem;
+    color: rgb(0, 0, 0);
     cursor: pointer;
+}
+
+.overview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    font-family: var(--quicksand);
+    font-size: 1rem;;
+}
+
+.img {
+    display: inline-block;
+    position: relative;
+    
+}
+.img i {
+    font-size: 4.5rem;
+    padding-right: 3rem;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 50px 0 10px;
+    max-width: 650px;
+}
+
+.category {
+    background: #FFF;
+    border-radius: 0.5rem;
+    padding: 1.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px 2px #505f5d;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 5px 2px #505f5d;
+}
+
+
+.notes {
+    align-items: right;
+    background-color: green;
+    flex: 1;
+    width: 40%;
 }
