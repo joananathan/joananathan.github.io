@@ -2,9 +2,31 @@ const categoriesContainer = document.querySelector('[category-list]');
 const newCategoryForm = document.querySelector('[data-new-category-form]');
 const newCategoryInput = document.querySelector('[data-new-category-input]');
 
-const LOCAL_STORAGE_CATEGORY_KEY = 'task.categories'
 
+const taskList = document.querySelector('.task-list');
+const backBtn = document.querySelector ('.back-button');
+const menuBtn = document.querySelector('.menu-button');
+
+const toggleScreen = () => {
+    screenWrapper.classList.toggle("show-category");
+  };
+  
+menuBtn.addEventListener('click', toggleScreen);
+backBtn.addEventListener('click', toggleScreen);
+
+
+
+const LOCAL_STORAGE_CATEGORY_KEY = 'task.categories'
+const LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY = 'task.selectedCategoryId'
 let categories = JSON.parse(localStorage.getItem(LOCAL_STORAGE_CATEGORY_KEY)) || []
+let selectedCategoryId = localStorage.getItem(LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY)
+
+categoriesContainer.addEventListener('click', e => {
+    if (e.target.tagName.toLowerCase() === ('li')) {
+        selectedCategoryId = e.target.dataset.categoryId
+        saveAndRender()
+    }
+})
 
 newCategoryForm.addEventListener('submit', e => {
     e.preventDefault()
@@ -27,6 +49,7 @@ function saveAndRender() {
 
 function save() {
     localStorage.setItem(LOCAL_STORAGE_CATEGORY_KEY, JSON.stringify(categories))
+    localStorage.setItem(LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY, selectedCategoryId)
 }
 
 function render() {
@@ -36,6 +59,9 @@ function render() {
         categoryElement.dataset.categoryId = category.id
         categoryElement.classList.add('category')
         categoryElement.textContent = category.name
+        if (category.id === selectedCategoryId) {
+        categoryElement.classList.add('active-category')
+    }
         categoriesContainer.appendChild(categoryElement)
     })
 }
