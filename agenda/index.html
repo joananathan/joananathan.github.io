@@ -40,7 +40,31 @@
     </header>
     <div class="page left">
         <div class = "agenda-section">
-            <div class="category-section screen">
+            <div class="task-list screen show-category">
+                <div class="task-header">
+                    <div class="back-button">
+                        <i class='bx bx-chevron-right'></i>
+                    </div>
+                    <h2 class="list-title">help</h2>
+                    <p class="task-count">3 tasks remaining</p>
+                </div>
+
+                <div class="task-body">
+                    <div class="tasks">
+                        <label for="task" id="task">
+                            <input type="checkbox" id="task" />
+                            <p>Placeholder</p>
+                        </label>
+                    </div>
+                    <div class="delete">
+                        <i class='bx bx-trash'></i>
+                    </div>
+
+                    <div class="new-task-creator"></div>
+                </div>
+            </div>
+            
+            <div class="category-section screen show-category">
                 <div class="menu-button">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -83,29 +107,6 @@
                 </form>
             </div>
 
-            <div class="task-list screen">
-                <div class="task-header">
-                    <div class="back-button">
-                        <i class='bx bx-chevron-right'></i>
-                    </div>
-                    <h2 class="list-title">help</h2>
-                    <p class="task-count">3 tasks remaining</p>
-                </div>
-
-                <div class="task-body">
-                    <div class="tasks">
-                        <label for="task" id="task">
-                            <input type="checkbox" id="task" />
-                            <p>Placeholder</p>
-                        </label>
-                    </div>
-                    <div class="delete">
-                        <i class='bx bx-trash'></i>
-                    </div>
-
-                    <div class="new-task-creator"></div>
-                </div>
-            </div>
         </div>
     </div>
     <div class = "page right">

@@ -8,13 +8,12 @@ const backBtn = document.querySelector ('.back-button');
 const menuBtn = document.querySelector('.menu-button');
 
 const toggleScreen = () => {
-    screenWrapper.classList.toggle("show-category");
-  };
-  
+    const agendaSection = document.querySelector('.agenda-section');
+    agendaSection.classList.toggle('show-category');
+};
+
 menuBtn.addEventListener('click', toggleScreen);
 backBtn.addEventListener('click', toggleScreen);
-
-
 
 const LOCAL_STORAGE_CATEGORY_KEY = 'task.categories'
 const LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY = 'task.selectedCategoryId'

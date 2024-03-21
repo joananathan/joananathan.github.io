@@ -107,7 +107,16 @@
     background-color: #aeffdc;
 }
 
+.task-list {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: -95%;
+    top: 100px;
+}
+
 .screen{
+    min-width: 100%;
     flex: 1;
     transition: all 0.3s;
 }
@@ -117,7 +126,7 @@
 }
 
 .agenda-section.show-category .task-list{
-    transform: translateX(-100%);
+    transform: translateX(100%);
 }
 
 
