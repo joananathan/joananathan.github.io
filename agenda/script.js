@@ -1,7 +1,7 @@
 const categoriesContainer = document.querySelector('[category-list]');
 const newCategoryForm = document.querySelector('[data-new-category-form]');
 const newCategoryInput = document.querySelector('[data-new-category-input]');
-
+const deleteCategoryButton = document.querySelector('[data-delete-category-button]');
 
 const taskList = document.querySelector('.task-list');
 const backBtn = document.querySelector ('.back-button');
@@ -14,6 +14,11 @@ const toggleScreen = () => {
 
 menuBtn.addEventListener('click', toggleScreen);
 backBtn.addEventListener('click', toggleScreen);
+deleteCategoryButton.addEventListener('click', e => {
+    categories = categories.filter(category => category.id !==selectedCategoryId)
+    selectedCategoryId = null
+    saveAndRender()
+});
 
 const LOCAL_STORAGE_CATEGORY_KEY = 'task.categories'
 const LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY = 'task.selectedCategoryId'

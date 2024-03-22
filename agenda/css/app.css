@@ -105,6 +105,20 @@
     }
 }
 
+form {
+    display: flex;
+
+}
+
+.btn {
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    padding: 0;
+    color: white;
+    font-size: 1.2rem;
+}
+
 .new {
     background: transparent;
     border: none;
@@ -115,10 +129,14 @@
     color: #FFF;
     font-size: inherit;
     font-family: var(--quicksand);
+    order: 2;
 }
 
 .new:focus {
-    border-bottom: 3px solid #FFF;
+    border-bottom-width: 3px;
+}
+
+.new:focus::placeholder {
     opacity: 0.6;
 }
 
@@ -144,7 +162,7 @@ input {
 }
 
 .agenda-section.show-category .category-section{
-    transform: translateX(300%);
+    transform: translateX(200%);
 }
 
 .agenda-section.show-category .task-list{
@@ -158,7 +176,7 @@ input {
 }
 
 .task-list {
-    padding-left: 12px;
+    padding-left: 20px;
 }
 
 .task-header i{
@@ -169,28 +187,26 @@ input {
 }
 
 .task-header h2{
-    padding-left: 20px;
     font-family: var(--quicksand);
     font-size: 1.5rem;
     color: #6dc219f3;
 }
 
 .task-header p{
-    padding-left: 20px;
     font-family: var(--quicksand);
     color: #68a484
 }
 
-.task-body {
-    margin: 20px;
+.tasks {
     max-width: 60%;
 }
 
-.tasks {
+.task {
     border-radius: 0.5rem;
     padding: 1.5rem 1.2rem;
     cursor: pointer;
     display: flex;
+    margin: 1rem 0;
     
     justify-content: space-between;
     box-shadow: 0 2px 2px 1px #135a19;
@@ -202,18 +218,18 @@ input {
     background-color: #54845cdb
 }
 
-.tasks .delete {
+.task .delete {
     border-radius: 40%;
     color: #2e2e2e;
     cursor: pointer;
     visibility: hidden;
 }
 
-.tasks:hover .delete {
+.task:hover .delete {
     visibility: visible;
     opacity: 1;
 }
 
-.tasks .delete:hover {
+.task .delete:hover {
     color: red;
 }
