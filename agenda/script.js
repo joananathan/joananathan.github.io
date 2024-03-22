@@ -3,9 +3,16 @@ const newCategoryForm = document.querySelector('[data-new-category-form]');
 const newCategoryInput = document.querySelector('[data-new-category-input]');
 const deleteCategoryButton = document.querySelector('[data-delete-category-button]');
 
+const categoryDisplayContainer = document.querySelector('[data-category-display-container]');
+const categoryTitleElement = document.querySelector('[data-category-title]');
+const categoryCountElement = document.querySelector('[data-category-count]');
+const tasksContainer = document.querySelector('[data-tasks]');
+
 const taskList = document.querySelector('.task-list');
 const backBtn = document.querySelector ('.back-button');
 const menuBtn = document.querySelector('.menu-button');
+
+
 
 const toggleScreen = () => {
     const agendaSection = document.querySelector('.agenda-section');
@@ -20,10 +27,11 @@ deleteCategoryButton.addEventListener('click', e => {
     saveAndRender()
 });
 
-const LOCAL_STORAGE_CATEGORY_KEY = 'task.categories'
-const LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY = 'task.selectedCategoryId'
-let categories = JSON.parse(localStorage.getItem(LOCAL_STORAGE_CATEGORY_KEY)) || []
-let selectedCategoryId = localStorage.getItem(LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY)
+
+const LOCAL_STORAGE_CATEGORY_KEY = 'task.categories';
+const LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY = 'task.selectedCategoryId';
+let categories = JSON.parse(localStorage.getItem(LOCAL_STORAGE_CATEGORY_KEY)) || [];
+let selectedCategoryId = localStorage.getItem(LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY);
 
 categoriesContainer.addEventListener('click', e => {
     if (e.target.tagName.toLowerCase() === ('li')) {
@@ -49,15 +57,26 @@ function createCategory(name) {
 function saveAndRender() {
     save()
     render()
-}
+};
 
 function save() {
     localStorage.setItem(LOCAL_STORAGE_CATEGORY_KEY, JSON.stringify(categories))
     localStorage.setItem(LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY, selectedCategoryId)
-}
+};
 
 function render() {
-    clearElement(categoriesContainer);
+    clearElement(categoriesContainer)
+    renderLists()
+
+    if (selectedCategoryId == null) {
+        categoryDisplayContainer.style.display = 'none'
+    }
+    else {
+
+    }
+}
+
+function renderLists() {
     categories.forEach(category => {
         const categoryElement = document.createElement('li')
         categoryElement.dataset.categoryId = category.id
