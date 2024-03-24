@@ -86,7 +86,6 @@ function createCategory(name) {
     };
 }
 function saveAndRender() {
-    
     save()
     render()
 };
@@ -113,6 +112,8 @@ function render() {
 }
 
 function renderTasks(selectedCategory) {
+    console.log(taskTemplate);
+    console.log(selectedCategory.tasks);
     selectedCategory.tasks.forEach(task => {
         const taskElement = document.importNode(taskTemplate.content, true)
         const checkbox = taskElement.querySelector('input')

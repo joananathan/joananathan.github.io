@@ -65,7 +65,7 @@
     padding: 1.3rem 1.4rem;
     cursor: pointer;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     box-shadow: 0 2px 2px 1px #135a19;
     transition: all 0.2s;
     font-family: var(--quicksand);
@@ -212,18 +212,17 @@ input {
     background-color: #54845cdb
 }
 
-.task .delete {
-    border-radius: 40%;
+.task .delete-task-btn {
     color: #2e2e2e;
     cursor: pointer;
     visibility: hidden;
 }
 
-.task:hover .delete {
+.task:hover .delete-task-btn {
     visibility: visible;
     opacity: 1;
 }
 
-.task .delete:hover {
+.task .delete-task-btn:hover {
     color: red;
 }
