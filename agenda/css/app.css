@@ -21,15 +21,8 @@
     background-color: rgb(194, 243, 130);
 }
 .agenda-section {
-    padding: 2% 100px 0 6%;
+    padding: 110px 100px 0 6%;
     opacity: 1;
-}
-
-.menu-button {
-    padding-top: 100px;
-    width: 3rem;
-    color: #ffffff;
-    cursor: pointer;
 }
 
 .overview {
@@ -69,7 +62,7 @@
 
 .category {
     border-radius: 0.5rem;
-    padding: 1.5rem 1rem;
+    padding: 1.3rem 1.4rem;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -77,9 +70,9 @@
     transition: all 0.2s;
     font-family: var(--quicksand);
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
-    background-color: #54845cdb
+    background-color: #54845cdb;
 }
 
 .category:hover {
@@ -140,16 +133,13 @@ form {
 }
 
 .new:focus::placeholder {
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 input {
     padding: 0 0 10px;
 }
 
-.active-category {
-    background-color: #aeffdc;
-}
 
 .task-list {
     position: absolute;
@@ -169,6 +159,7 @@ input {
 }
 
 .agenda-section.show-category .task-list{
+    
     transform: translateX(100%);
 }
 
@@ -183,7 +174,7 @@ input {
 }
 
 .task-header i{
-    padding-top: 100px;
+    padding-top: 30px;
     color: #FFF;
     font-size: 3.5rem;
     cursor: pointer;
