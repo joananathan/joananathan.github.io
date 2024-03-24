@@ -14,7 +14,7 @@ const newTaskInput = document.querySelector('[data-new-task-input]')
 const taskList = document.querySelector('.task-list');
 const backBtn = document.querySelector ('.back-button');
 
-let selectedCategoryId = null; // Define selectedCategoryId variable
+
 
 const toggleScreen = () => {
     const agendaSection = document.querySelector('.agenda-section');
@@ -33,6 +33,7 @@ deleteCategoryButton.addEventListener('click', e => {
 const LOCAL_STORAGE_CATEGORY_KEY = 'task.categories';
 const LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY = 'task.selectedCategoryId';
 let categories = JSON.parse(localStorage.getItem(LOCAL_STORAGE_CATEGORY_KEY)) || [];
+let selectedCategoryId = null;
 
 categoriesContainer.addEventListener('click', e => {
     if (e.target.tagName.toLowerCase() === ('li')) {
@@ -42,9 +43,19 @@ categoriesContainer.addEventListener('click', e => {
     }
 })
 
+tasksContainer.addEventListener('click', e => {
+    if (e.target.tagName.toLowerCase() === 'input') {
+      const selectedCategory = categories.find(category => category.id === selectedCategoryId)
+      const selectedTask = selectedCategory.tasks.find(task => task.id === e.target.id)
+      selectedTask.complete = e.target.checked
+      save()
+      renderTaskCount(selectedCategory)
+    }
+  })
+
 newCategoryForm.addEventListener('submit', e => {
     e.preventDefault()
-    const categoryName = newCategoryInput.value
+    const categoryName = newCategoryInput.value.trim()
     if (categoryName == null || categoryName === '') return
     const category = createCategory(categoryName)
     newCategoryInput.value = null
@@ -54,7 +65,7 @@ newCategoryForm.addEventListener('submit', e => {
 
 newTaskForm.addEventListener('submit', e => {
     e.preventDefault()
-    const taskName = newTaskInput.value
+    const taskName = newTaskInput.value.trim()
     if (taskName == null || taskName === '') return
     const task = createTask(taskName)
     newTaskInput.value = null
@@ -75,6 +86,7 @@ function createCategory(name) {
     };
 }
 function saveAndRender() {
+    
     save()
     render()
 };
