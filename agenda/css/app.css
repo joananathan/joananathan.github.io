@@ -201,13 +201,14 @@ input {
     cursor: pointer;
     display: flex;
     margin: 1rem 0;
-    
+    position: relative;
     justify-content: space-between;
     box-shadow: 0 2px 2px 1px #135a19;
     transition: all 0.2s;
     font-family: var(--quicksand);
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1rem;
+    
     color: white;
     background-color: #54845cdb
 }
@@ -226,3 +227,30 @@ input {
 .task .delete-task-btn:hover {
     color: red;
 }
+
+
+
+.task input[type=checkbox] {
+    display: none; /* Hide the default checkbox */
+  }
+
+
+[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.task label{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px
+}
+/* 
+.task label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 10px;
+    height: 3px;
+    background: black;
+} */
