@@ -45,8 +45,15 @@
                     <div class="back-button">
                         <i class='bx bx-left-arrow-alt'></i>
                     </div>
-                    <h2 class="list-title" data-category-title> Task name</h2>
-                    <p class="task-count" data-category-count>3 tasks remaining</p>
+                    <div class="overview">
+                        <div class="content">
+                            <h2 class="list-title" data-category-title> Task name</h2>
+                            <p class="task-count" data-category-count>3 tasks remaining</p>
+                        </div>
+                        <div class="delete-category-button">
+                            <i class='bx bx-trash'></i>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="task-body">
@@ -68,9 +75,6 @@
                     </form>
                 </div>
 
-                <div class="delete-category-button">
-                    <button class="btn del" data-delete-category-button>Delete current category</button>
-                </div>
             </div>
             
             <div class="category-section screen show-category">
@@ -116,9 +120,6 @@
             <input type="checkbox" />
             <label>
             </label>
-            <div class="delete-task-btn">
-                <i class='bx bx-trash'></i>
-            </div>
         </div> 
     </template>
 

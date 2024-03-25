@@ -41,13 +41,13 @@
     color: #68a484
 }
 
-.img {
+.img, .delete-category-button {
     display: inline-block;
     position: relative;
     
 }
 .img i {
-    color: #68a484;
+    color: #4e8f6c;
     font-size: 4.5rem;
     padding-right: 2rem;
 }
@@ -254,3 +254,17 @@ input {
     height: 3px;
     background: black;
 } */
+
+
+.delete-category-button i {
+    padding-top: 0;
+    color: rgb(225, 111, 111);
+    margin: 0;
+    font-size: 2.5rem;
+    padding-right: 30vw;
+}
+
+.delete-category-button i:hover {
+    cursor: pointer;
+    color: red;
+}

@@ -1,7 +1,7 @@
 const categoriesContainer = document.querySelector('[category-list]');
 const newCategoryForm = document.querySelector('[data-new-category-form]');
 const newCategoryInput = document.querySelector('[data-new-category-input]');
-const deleteCategoryButton = document.querySelector('[data-delete-category-button]');
+const deleteCategoryButton = document.querySelector('.delete-category-button');
 
 const categoryDisplayContainer = document.querySelector('[data-category-display-container]');
 const categoryTitleElement = document.querySelector('[data-category-title]');
@@ -13,7 +13,6 @@ const newTaskInput = document.querySelector('[data-new-task-input]')
 
 const taskList = document.querySelector('.task-list');
 const backBtn = document.querySelector ('.back-button');
-const deleteTaskBtn = document.querySelector('.delete-task-btn')
 
 
 const toggleScreen = () => {
@@ -71,12 +70,6 @@ newTaskForm.addEventListener('submit', e => {
     newTaskInput.value = null
     const selectedCategory = categories.find(category => category.id === selectedCategoryId)
     selectedCategory.tasks.push(task)
-    saveAndRender()
-})
-
-deleteTaskBtn.addEventListener('click', e => {
-    const selectedCategory = categories.find(category => category.id === selectedCategoryId)
-    selectedCategory.tasks = selectedCategory.tasks.filter(task => !task.complete)
     saveAndRender()
 })
 
