@@ -2,6 +2,7 @@ const categoriesContainer = document.querySelector('[category-list]');
 const newCategoryForm = document.querySelector('[data-new-category-form]');
 const newCategoryInput = document.querySelector('[data-new-category-input]');
 const deleteCategoryButton = document.querySelector('.delete-category-button');
+const clearCompleteTasksButton = document.querySelector('[data-clear-complete-tasks-button]')
 
 const categoryDisplayContainer = document.querySelector('[data-category-display-container]');
 const categoryTitleElement = document.querySelector('[data-category-title]');
@@ -52,6 +53,13 @@ tasksContainer.addEventListener('click', e => {
     }
   })
 
+
+clearCompleteTasksButton.addEventListener('click', e => {
+    const selectedCategory = categories.find(category => category.id === selectedCategoryId)
+    selectedCategory.tasks = selectedCategory.tasks.filter(task => !task.complete)
+    saveAndRender()
+})
+
 newCategoryForm.addEventListener('submit', e => {
     e.preventDefault()
     const categoryName = newCategoryInput.value.trim()
@@ -72,6 +80,7 @@ newTaskForm.addEventListener('submit', e => {
     selectedCategory.tasks.push(task)
     saveAndRender()
 })
+
 
 function createTask(name) {
     return { id: Date.now().toString(), name: name, complete: false }
@@ -137,7 +146,6 @@ function renderLists() {
         categoryElement.textContent = category.name
         if (category.id === selectedCategoryId) {
         categoryElement.classList.add('active-category')
-        
     }
         categoriesContainer.appendChild(categoryElement)
     })

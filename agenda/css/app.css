@@ -112,6 +112,25 @@ form {
     font-size: 1.2rem;
 }
 
+.delete-button {
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 5x 8px;
+    font-size: 15px;
+    background: 0;
+    color: rgb(218, 216, 216);
+    border: 0;
+}
+
+.delete-button:hover {
+    color: #caacac;
+}
+
+.delete-button:active {
+    color: #f16d6d;
+}
+
 .new {
     display: flex;
     background: transparent;
@@ -169,6 +188,10 @@ input {
     justify-content: space-between;
 }
 
+.overview .content {
+    padding-left: 10px;
+}
+
 .task-list {
     padding-left: 20px;
 }
@@ -206,7 +229,7 @@ input {
     box-shadow: 0 2px 2px 1px #135a19;
     transition: all 0.2s;
     font-family: var(--quicksand);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1rem;
     
     color: white;
@@ -229,7 +252,6 @@ input {
 }
 
 
-
 .task input[type=checkbox] {
     display: none; /* Hide the default checkbox */
   }
@@ -237,7 +259,8 @@ input {
 
 [type="checkbox"]:checked + label {
     text-decoration: line-through;
-    opacity: 0.5;
+    font-weight: 300;
+    opacity: 0.3;
 }
 
 .task label{
@@ -266,5 +289,9 @@ input {
 
 .delete-category-button i:hover {
     cursor: pointer;
+    color: rgb(217, 83, 83);
+}
+
+.delete-category-button i:active {
     color: red;
 }
