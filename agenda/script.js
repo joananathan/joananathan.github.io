@@ -10,8 +10,8 @@ const categoryTitleElement = document.querySelector('[data-category-title]');
 const categoryCountElement = document.querySelector('[data-category-count]');
 const tasksContainer = document.querySelector('[data-tasks]');
 const taskTemplate = document.getElementById('task-template');
-const newTaskForm = document.querySelector('[data-new-task-form]')
-const newTaskInput = document.querySelector('[data-new-task-input]')
+const newTaskForm = document.querySelector('[data-new-task-form]');
+const newTaskInput = document.querySelector('[data-new-task-input]');
 
 const taskList = document.querySelector('.task-list');
 const backBtn = document.querySelector ('.back-button');
@@ -22,6 +22,13 @@ const toggleScreen = () => {
     agendaSection.classList.toggle('show-category');
 }
 
+
+const LOCAL_STORAGE_CATEGORY_KEY = 'task.categories';
+const LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY = 'task.selectedCategoryId';
+let categories = JSON.parse(localStorage.getItem(LOCAL_STORAGE_CATEGORY_KEY)) || [];
+let selectedCategoryId = null;
+
+
 backBtn.addEventListener('click', toggleScreen);
 deleteCategoryButton.addEventListener('click', e => {
     categories = categories.filter(category => category.id !== selectedCategoryId)
@@ -30,11 +37,6 @@ deleteCategoryButton.addEventListener('click', e => {
     toggleScreen();
 });
 
-
-const LOCAL_STORAGE_CATEGORY_KEY = 'task.categories';
-const LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY = 'task.selectedCategoryId';
-let categories = JSON.parse(localStorage.getItem(LOCAL_STORAGE_CATEGORY_KEY)) || [];
-let selectedCategoryId = null;
 
 categoriesContainer.addEventListener('click', e => {
     if (e.target.tagName.toLowerCase() === ('li')) {
@@ -51,7 +53,6 @@ tasksContainer.addEventListener('click', e => {
       selectedTask.complete = e.target.checked
       save()
       renderTaskCount(selectedCategory)
-      updateTotal()
     }
   })
 
@@ -114,8 +115,8 @@ function save() {
 };
 
 function render() {
-    clearElement(categoriesContainer)
     updateTotal()
+    clearElement(categoriesContainer)
     renderLists()
     const selectedCategory = categories.find(category => category.id === selectedCategoryId)
     if (selectedCategoryId == null) {
@@ -168,5 +169,5 @@ function clearElement(element) {
     }
 }
 
-
+updateTotal()
 render()
