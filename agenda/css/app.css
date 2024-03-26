@@ -192,6 +192,12 @@ input {
     padding-left: 10px;
 }
 
+.task-overview {
+    display: flex;
+    align-items: center;
+    justify-content: space-evely;
+}
+
 .task-list {
     padding-left: 20px;
 }
@@ -205,8 +211,8 @@ input {
 
 .task-header h2{
     font-family: var(--quicksand);
-    font-size: 1.5rem;
-    color: #6dc219f3;
+    font-size: 1.7rem;
+    color: #4da592f3;
 }
 
 .task-header p{
@@ -220,20 +226,23 @@ input {
 
 .task {
     border-radius: 0.5rem;
-    padding: 1.5rem 1.2rem;
-    cursor: pointer;
+    padding: 0.8rem 1.2rem;
     display: flex;
     margin: 1rem 0;
     position: relative;
     justify-content: space-between;
-    box-shadow: 0 2px 2px 1px #135a19;
+    box-shadow: 0 2px 2px 1px #286974;
     transition: all 0.2s;
     font-family: var(--quicksand);
     font-weight: 500;
     font-size: 1rem;
     
     color: white;
-    background-color: #54845cdb
+    background-color: #5ab897db
+}
+
+.task:hover {
+    transform: translateY(-3px);
 }
 
 .task .delete-task-btn {
@@ -252,8 +261,12 @@ input {
 }
 
 
+
 .task input[type=checkbox] {
-    display: none; /* Hide the default checkbox */
+    margin: 4px 0;
+    padding-left: 20px;
+    width: 16px;
+    height: 16px;
   }
 
 
@@ -284,7 +297,7 @@ input {
     color: rgb(225, 111, 111);
     margin: 0;
     font-size: 2.5rem;
-    padding-right: 30vw;
+    padding-left: calc(100vh - 600px);
 }
 
 .delete-category-button i:hover {
