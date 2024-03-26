@@ -51,6 +51,7 @@ tasksContainer.addEventListener('click', e => {
       selectedTask.complete = e.target.checked
       save()
       renderTaskCount(selectedCategory)
+      updateTotal()
     }
   })
 
@@ -123,7 +124,7 @@ function render() {
     else {
         categoryDisplayContainer.style.display = ''
         categoryTitleElement.innerText = selectedCategory.name
-        renderTaskCount(selectedCategory) // Corrected function name here
+        renderTaskCount(selectedCategory)
         clearElement(tasksContainer)
         renderTasks(selectedCategory)
     }
