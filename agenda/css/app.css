@@ -267,13 +267,14 @@ input {
     padding-left: 20px;
     width: 16px;
     height: 16px;
+    cursor: pointer;
   }
 
 
 [type="checkbox"]:checked + label {
     text-decoration: line-through;
     font-weight: 300;
-    opacity: 0.3;
+    opacity: 0.6;
 }
 
 .task label{
