@@ -1,3 +1,10 @@
+import NotesAPI from "./notesAPI"
+
+NotesAPI.saveNote({
+    title: "New Note!",
+    body: "i am a new note."
+});
+
 const categoriesContainer = document.querySelector('[category-list]');
 const newCategoryForm = document.querySelector('[data-new-category-form]');
 const newCategoryInput = document.querySelector('[data-new-category-input]');
@@ -28,6 +35,11 @@ const LOCAL_STORAGE_SELECTED_CATEGORY_ID_KEY = 'task.selectedCategoryId';
 let categories = JSON.parse(localStorage.getItem(LOCAL_STORAGE_CATEGORY_KEY)) || [];
 let selectedCategoryId = null;
 
+
+window.addEventListener('scroll', function(){
+    var header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY >= 10)
+})
 
 backBtn.addEventListener('click', toggleScreen);
 deleteCategoryButton.addEventListener('click', e => {
