@@ -1,4 +1,6 @@
+import NotesView from "./notesView";
 import NotesAPI from "./notesAPI"
+
 
 NotesAPI.saveNote({
     title: "New Note!",
