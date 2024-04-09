@@ -1,11 +1,7 @@
-import NotesView from "./notesView";
-import NotesAPI from "./notesAPI"
+import App from "./app.js";
 
-
-NotesAPI.saveNote({
-    title: "New Note!",
-    body: "i am a new note."
-});
+const root = document.getElementById("app");
+const app = new App(root);
 
 const categoriesContainer = document.querySelector('[category-list]');
 const newCategoryForm = document.querySelector('[data-new-category-form]');
