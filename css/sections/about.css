@@ -36,3 +36,42 @@
     font-weight: 300;
     text-align: justify;
 }
+
+.about-us__contact {
+    padding-top: 5px;
+    font-family: var(--jakarta);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.about-us__contact-description {
+    margin-bottom: 5px;
+}
+
+.about-us__contact i{
+    font-size: 40px;
+}
+
+.bxl-instagram {
+    color: #E1306C;
+}
+
+.bxl-facebook-circle {
+    color: #0165E1;
+}
+
+.bxl-twitter {
+    color: #1D9BF0;
+}
+
+.bxl-youtube {
+    color: #FF0000
+}
+
+.about-us__contact i:hover {
+    opacity: 0.6;
+}
+
+.about-us__contact i:active {
+    opacity: 0.4;
+}
