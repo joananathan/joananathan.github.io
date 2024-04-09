@@ -25,7 +25,14 @@
     inset: 0;
     width: 100%;
     
-    background: linear-gradient(to bottom, var(--primary-color) 75%, white 100%);
+    background: 
+      radial-gradient(farthest-side at -33.33% 50%,#0000 52%,#d0fff3 54% 57%,#0000 59%) 0 calc(124px/2),
+      radial-gradient(farthest-side at 50% 133.33%,#0000 52%,#d0fff3 54% 57%,#0000 59%) calc(124px/2) 0,
+      radial-gradient(farthest-side at 133.33% 50%,#0000 52%,#d0fff3 54% 57%,#0000 59%),
+      radial-gradient(farthest-side at 50% -33.33%,#0000 52%,#d0fff3 54% 57%,#0000 59%),
+      #11907a;
+    background-size: calc(124px/4.667) 124px,124px calc(124px/4.667);
+
     z-index: -1;
 }
 
@@ -35,7 +42,9 @@
     justify-content: space-between;
     flex-direction: column;
     padding-left: 5%;
-    background: linear-gradient(to bottom, var(--background-color) 75%, white 95%);
+    background-image: radial-gradient(#d0fff3 2px, transparent 2px);
+    background-size: 31px 31px;
+    background-color: #b5e9dd;
 }
 
 .hero-content-info {

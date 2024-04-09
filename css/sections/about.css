@@ -1,9 +1,9 @@
 .about-us {
     margin-top: 7%;
-    min-height: 700px;
+    min-height: 500px;
     overflow: hidden;
-    background: #FFF;
     padding: 0 10%
+    
 }
 
 .about-us__image img {

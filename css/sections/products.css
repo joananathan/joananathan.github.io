@@ -1,0 +1,16 @@
+.products {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.products__title {
+    padding-bottom: 10px;
+    font-family: var(--jakarta);
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.video {
+    align-items: center;
+}
