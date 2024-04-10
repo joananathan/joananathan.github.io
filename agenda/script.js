@@ -22,12 +22,22 @@ const taskList = document.querySelector('.task-list');
 const backBtn = document.querySelector ('.back-button');
 
 const mobileMenu = document.querySelector(".header__menu-mobile");
+const menu = document.querySelector(".header__menu")
 
 const toggleMobileMenu = () => {
     const menuSection = document.querySelector('.header__menu');
     menuSection.classList.toggle('show-menu');
 }
 mobileMenu.addEventListener('click', toggleMobileMenu);
+
+window.addEventListener('scroll', function(){
+    var header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY >= 10);
+})
+
+mobileMenu.addEventListener('click', toggleMobileMenu);
+menu.addEventListener('click', toggleMobileMenu);
+
 
 
 const toggleScreen = () => {
