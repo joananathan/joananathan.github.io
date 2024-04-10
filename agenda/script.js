@@ -21,6 +21,14 @@ const newTaskInput = document.querySelector('[data-new-task-input]');
 const taskList = document.querySelector('.task-list');
 const backBtn = document.querySelector ('.back-button');
 
+const mobileMenu = document.querySelector(".header__menu-mobile");
+
+const toggleMobileMenu = () => {
+    const menuSection = document.querySelector('.header__menu');
+    menuSection.classList.toggle('show-menu');
+}
+mobileMenu.addEventListener('click', toggleMobileMenu);
+
 
 const toggleScreen = () => {
     const agendaSection = document.querySelector('.agenda-section');

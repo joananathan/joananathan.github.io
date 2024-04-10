@@ -76,7 +76,7 @@ header.sticky {
 }
 
 .header__menu-mobile {
-    padding-right: 9%;
+    margin-right: 9%;
     display: none;
     align-items: center;
     justify-content: space-evenly;
@@ -85,6 +85,7 @@ header.sticky {
     list-style: none;
     position: relative;
 }
+
 
 #menu {
     font-size: 22px;

@@ -51,7 +51,7 @@ footer {
   }
 
   .about-us__title{
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 500;
   }
 
@@ -62,8 +62,53 @@ footer {
 }
 }
 
-@media screen and (max-width: 600px) {
-  body{
-    display:none;
+@media screen and (max-width: 700px) {
+  .about-us__image img {
+    width: 0;
+  }
+
+
+  .mobile-menu {
+    font-size: 0px;
+  }
+  .header__menu-mobile {
+    display: flex;
+    padding: 0 16px;
+    border-radius: 50px;;
+  }
+
+  .header__menu-mobile:hover {
+    background-color: rgba(0, 0, 0, 0.416);
+  }
+
+  .header__menu-mobile:active {
+    background-color: rgba(0, 0, 0, 0.482);
+  }
+
+  .header__menu {
+    all: initial;
+    margin-top: 78px;
+    position:fixed;
+    right: 0;
+    background: rgb(13, 119, 101);
+    width: 250px;
+    height: 100vh;
+    list-style: none;
+    text-align: center;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    transition-duration: 0.3s;
+  }
+
+  .header__menu.show-menu{
+    transform: translateX(100%);
+    transition-duration: 0.3s;
+  }
+
+  .header__menu li a {
+    font-size: 1.5em;
+    color: rgb(198, 255, 228);
   }
 }
