@@ -50,6 +50,12 @@ footer {
     max-height: 40vh;
   }
 
+  .hero-content-info{
+    align-items: center;
+    text-align: center;
+  }
+
+
   .about-us__title{
     font-size: 35px;
     font-weight: 500;
@@ -59,6 +65,16 @@ footer {
     width: 30%;
     float: right;
     margin: 50px;
+}
+
+.hero-content__start-button {
+  min-width: 182px;
+}
+
+.hero-content__buttons {
+  margin: 41px 41px 0 41px; /* Adjusted margin values */
+  display: flex;
+  flex-wrap: wrap;
 }
 }
 
@@ -110,5 +126,17 @@ footer {
   .header__menu li a {
     font-size: 1.5em;
     color: rgb(198, 255, 228);
+  }
+
+  .hero_content {
+    padding-left: 0;
+}
+
+  .hero-content-info h1,
+  .hero-content-info p {
+  text-align: center;
+  }
+  .hero-content-info h1 {
+    font-size: 45px;
   }
 }
