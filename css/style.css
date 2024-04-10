@@ -38,7 +38,32 @@ footer {
 }
 
 @media screen and (max-width: 915px) {
-  body {
-    display: none;
+  .hero {
+    flex-direction: column;
+  }
+  .hero img {
+    max-height: 45vh;
+    padding: 0 4%;
+    padding-top: 100px;
+  }
+  .hero-image {
+    max-height: 40vh;
+  }
+
+  .about-us__title{
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .about-us__image img {
+    width: 30%;
+    float: right;
+    margin: 50px;
+}
+}
+
+@media screen and (max-width: 600px) {
+  body{
+    display:none;
   }
 }
