@@ -28,8 +28,16 @@ body {
     background: #d9f6ef;
 }
 
+footer {
+  border-top: 1px solid black;
+  margin: auto 10%;
+  font-family: var(--jakarta);
+  font-size: 1em;
+  font-weight: 300;
+  padding-bottom: 50px;
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 915px) {
   body {
     display: none;
   }

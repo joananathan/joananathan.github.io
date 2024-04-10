@@ -84,3 +84,10 @@ a{
     font-weight: 300;
     margin: 0 10%;
 }
+
+.distraction-img {
+    border: #2f693f;
+    max-width: 880px;
+    margin: auto;
+    padding-bottom: 100px;
+}
