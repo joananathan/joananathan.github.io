@@ -1,145 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agenda App</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <!--Syne-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
-    <!--Abel-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav class="header__nav">
-            <div class="header__logo">
-                <a href="https://myagenda.pro/#" class="logo">agenda</a>
-                
+    <script src="script.js"></script>
+    <div class="frame">
+        <div class="left">
+            <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 40 48" aria-hidden="true" jsname="jjf7Ff"><path fill="#4285F4" d="M39.2 24.45c0-1.55-.16-3.04-.43-4.45H20v8h10.73c-.45 2.53-1.86 4.68-4 6.11v5.05h6.5c3.78-3.48 5.97-8.62 5.97-14.71z"></path><path fill="#34A853" d="M20 44c5.4 0 9.92-1.79 13.24-4.84l-6.5-5.05C24.95 35.3 22.67 36 20 36c-5.19 0-9.59-3.51-11.15-8.23h-6.7v5.2C5.43 39.51 12.18 44 20 44z"></path><path fill="#FABB05" d="M8.85 27.77c-.4-1.19-.62-2.46-.62-3.77s.22-2.58.62-3.77v-5.2h-6.7C.78 17.73 0 20.77 0 24s.78 6.27 2.14 8.97l6.71-5.2z"></path><path fill="#E94235" d="M20 12c2.93 0 5.55 1.01 7.62 2.98l5.76-5.76C29.92 5.98 25.39 4 20 4 12.18 4 5.43 8.49 2.14 15.03l6.7 5.2C10.41 15.51 14.81 12 20 12z"></path></svg>
+            <h1>Sign in</h1>
+            <h2>Use your Google Account</h2>
+        </div>
+        <div class="right">
+            <div class="inputBox">
+                <input type="text" id = 'myTextInput' required="required">
+                <span>Email or phone</span>
             </div>
-            <ul class="header__menu show-menu">
-                <li><a href="https://myagenda.pro/#">Home</a></li>
-                <li><a href="https://myagenda.pro/#about-us">About</a></li>
-                <li><a href="https://myagenda.pro/#tools">Tools</a></li>
-                <li><a href="https://myagenda.pro/#tips">Tips</a></li>
-            </ul>
-
-            <ul class="header__menu-mobile">
-                <div class="mobile-menu"><li><i id = 'menu' class='bx bx-menu' alt="menu"></i></li></div>
-            </ul>
-        </nav>
-    </header>
-    <div class="page left">
-        <div class = "agenda-section">
-            <div class="task-list screen show-category" data-category-display-container>
-                <div class="task-header">
-                    <div class="back-button">
-                        <i class='bx bx-left-arrow-alt'></i>
-                    </div>
-                    <div class="task-overview">
-                        <div class="content">
-                            <h2 class="list-title" data-category-title> Task name</h2>
-                            <p class="task-count" data-category-count>3 tasks remaining</p>
-                        </div>
-                        <div class="delete-category-button">
-                            <i class='bx bx-trash'></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="task-body">
-                    <div class="tasks" data-tasks>
-                        
-                    </div>
-                    
-                </div>
-                <div class="new-task-creator">
-                    <form action = "" data-new-task-form>
-                        <input
-                            type="text"
-                            class="new item"
-                            data-new-task-input
-                            placeholder="new task name"
-                            aria-label="new task name"
-                        />
-                        <button class="btn create" aria-label="create new task">+</button>
-                    </form>
-                </div>
-
-                <div class="delete-tasks">
-                    <button class="delete-button" data-clear-complete-tasks-button>Clear completed tasks</button>
-                </div>
-
+            <div class="text">
+                <a class = 'forgot' href = 'https://accounts.google.com/signin/v2/usernamerecovery?continue=https%3A%2F%2Fwww.google.com.au%2F&ddm=0&dsh=S-82506344%3A1724029423303778&ec=GAlAmgQ&flowEntry=AddSession&flowName=GlifWebSignIn&hl=en&authuser=0'>Forgot email?</a>
+            <p class = "not" >Not your computer? Use a private browsing window to sign in.</p>
+            <a class = 'learn' href = 'https://support.google.com/accounts?p=signin_privatebrowsing&hl=en'>Learn more about using Guest mode</a>
             </div>
-            
-            <div class="category-section screen show-category">
-                <div class = 'overview'>
-                    <div class="content">
-                        <h1>View your agenda</h1>
-                        <p>You currently have <span id = 'total-tasks'>5</span></p>
-                    </div>
-                    <div class = 'img'>
-                        <i class='bx bxs-calendar-event'></i>
-                    </div>
-                </div>
-
-                <ul class="category-list" category-list>
-                    <!-- <li class="category">Personal</li>
-                    <li class="category">School</li>
-                    <li class="category">Education</li> -->
-                </ul>
-
-                <form action="" data-new-category-form>
-                    <input 
-                        type="text"
-                        class="new item"
-                        data-new-category-input
-                        placeholder="New category"
-                        aria-label="New category name"
-                    />
-                    <button class="btn item" aria-label="Create new category">+</button>
-                </form>
+            <div class="buttons">
+                <button class="next">Next</button>
+                <button class="create">Create account</button>
             </div>
-
         </div>
     </div>
-    <div class = "page right">
-        <div class="notes" id="app">
-            <!-- <div class="notes__sidebar">
-                <button class="notes__add" type="button">Add Note</button>
-                <div class="notes__list">
-                    <div class="notes__list-item">
-                        <div class="notes__small-title">Lesson notes</div>
-                        <div class="notes__small-body">bruh</div>
-                        <div class="notes__small-updated">today 19:am</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="notes__preview">
-                <input class="notes__title" type="text" placeholder="Enter a title...">
-                <textarea class="notes__body">I am the notes body...</textarea>
-            </div> -->
-
-        </div>
-    </div> 
-    
-
-    <template id="task-template">
-        <div class="task">
-            <input type="checkbox" />
-            <label>
-            </label>
-        </div> 
-    </template>
-
-    <script src="script.js" type="module"></script>
+    <a class="language">English (United States)&nbsp;&nbsp;&nbsp;&nbsp;▾</a>
+    <a class="bottom" href="https://support.google.com/accounts?hl=en-US&p=account_iph">Terms</a>
+    <a class="bottom" href="https://accounts.google.com/TOS?loc=AU&hl=en-US&privacy=true">Privacy</a>
+    <a class="bottom" href="https://accounts.google.com/TOS?loc=AU&hl=en-US">Help</a>
 </body>
+</html>

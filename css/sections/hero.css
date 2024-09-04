@@ -92,6 +92,7 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 23px;
+    margin-right: -30px;
 }
 
 .hero-content__start-button:hover {
