@@ -27,11 +27,15 @@ h2{
     margin: auto;
     background-color: white;
     border-radius: 20px;
+    overflow: hidden;
 }
 .left{
     grid-column: 1;
     padding: 9%;
     padding-bottom: 30%;
+    z-index: 1000;
+    overflow: hidden;
+
 }
 .right {
     grid-column: 2;
@@ -39,6 +43,8 @@ h2{
     padding-top: 17%;
     padding-bottom: 6%;
     padding-right: 12%;
+    z-index: 0;
+
 }
 input{
     width: 100%;
@@ -258,4 +264,48 @@ input{
 .language:hover{
     background-color: #e2e7eb;
     border-radius: 5px;
+}
+
+/* Add these to your existing CSS */
+
+@keyframes slide-left {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-30%);
+      opacity: 0;
+    }
+  }
+
+@keyframes slide-password {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-400%);
+      opacity: 1;
+    }
+  }
+  
+  .slide-out {
+    animation: slide-left 0.2s forwards;
+  }
+
+  .slide-in {
+    animation: slide-password 0.3s forwards;
+  }
+  
+  
+.password{
+    position: absolute;
+    right: -20%;
+    
+}
+.thing{
+    grid-column: 2;
+    padding-top: 20%;
+    
 }
