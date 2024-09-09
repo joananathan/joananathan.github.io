@@ -4,6 +4,7 @@ window.onload = function () {
   var input = document.getElementById('myTextInput');
   setTimeout(function() {
       input.focus();
+      all.style.opacity 
   }, 250);
 }
 document.querySelector('.next').addEventListener('click', function() {

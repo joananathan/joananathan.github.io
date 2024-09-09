@@ -10,6 +10,7 @@
 body {
     background-color: #f0f4f9;
     padding: 8% 13% 0 13%;
+    overflow: hidden;
 }
 
 h1{
@@ -26,15 +27,13 @@ h2{
     display: grid;
     margin: auto;
     background-color: white;
-    border-radius: 20px;
-    overflow: hidden;
+    border-radius: 25px;
 }
 .left{
     grid-column: 1;
     padding: 9%;
     padding-bottom: 30%;
     z-index: 1000;
-    overflow: hidden;
 
 }
 .right {
@@ -307,5 +306,4 @@ input{
 .thing{
     grid-column: 2;
     padding-top: 20%;
-    
 }
