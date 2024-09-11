@@ -346,6 +346,7 @@ input{
 .pinputBox {
     position: relative; 
     opacity: 1;
+    width: 200%;
  }
  .pinputBox input {
      padding: 12px 13px 13px 13px;
@@ -355,6 +356,10 @@ input{
      letter-spacing: 0.12rem;
      opacity: 0.85;
      font-size: 13px;
+     font-family: "Reddit Sans",roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+    font-weight: 400;
+    font-stretch: condensed;
+    letter-spacing: 0.09rem;
  }
  .pinputBox span {
      position: absolute;
@@ -376,7 +381,7 @@ input{
      opacity: 1;
  }
  .pinputBox input:focus {
-     border: 2px solid #0b57d0;
+     border: 1px solid #0b57d0;
  }
  .pinputBox input:valid ~ span{
      font-size: 0.7rem;
@@ -385,3 +390,23 @@ input{
      padding: 0 5px;
      opacity: 1;
  }
+
+ /* ... existing CSS ... */
+ .email-display svg{
+    width: 25px;
+    opacity: 0.9;
+    margin-top: -12px;
+}
+.email-display {
+    border: 1px solid #909190;
+    border-radius: 30px;
+    font-size: 0.5rem;
+    color: #333;
+    height: 25px;
+}
+
+
+.display-text {
+    font-weight: 500;
+    color: #333;
+}

